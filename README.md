@@ -6,7 +6,7 @@ This repo demonstrates the use of the [Antithesis platform](https://antithesis.c
 
 ## Setup
 
-There are 4 containers running in this system: 3 that make up an etcd cluster (`etcd0`, `etcd1`, `etcd2`) and one that ["makes the system go"](https://antithesis.com/docs/getting_started/basic_test_hookup/)(`client`). 
+There are 4 containers running in this system: 3 that make up an etcd cluster (`etcd0`, `etcd1`, `etcd2`) and one that ["makes the system go"](https://antithesis.com/docs/getting_started/basic_test_hookup/) (`client`). 
 
 The `client` container also runs the `entrypoint.py` script runs when it starts. This script confirms that all of the etcd hosts are available before [signaling the software is ready to test](https://antithesis.com/docs/getting_started/basic_test_hookup/#ready-signal). 
 
@@ -52,7 +52,7 @@ Antithesis SDKs allow users to [express the properties their software should hav
 
 #### Sometimes Assertions
 
-[Sometimes assertions](https://antithesis.com/docs/properties_assertions/properties/#sometimes-properties) check that intended funcitonality *happens at least once in the course of testing* - in this case, that operations happen against the etcd cluster and that validation occurs. For example, in `parallel_driver_generate_traffic.py`: 
+[Sometimes assertions](https://antithesis.com/docs/properties_assertions/properties/#sometimes-properties) check that intended functionality *happens at least once in the course of testing* - in this case, that operations happen against the etcd cluster and that validation occurs. For example, in `parallel_driver_generate_traffic.py`: 
 
 `sometimes(success, "Client can make successful get requests", None)`
 
